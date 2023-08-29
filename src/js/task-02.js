@@ -8,16 +8,23 @@ const ingredients = [
 ];
 
 function addLiItem() {
+  const ingredientsArr = [];
   const list = document.querySelector('#ingredients');
   ingredients.forEach(el => {
     const addLi = document.createElement('li');
     addLi.classList.add('item');
     addLi.textContent = el;
-    list.append(addLi);
-  });
-}
+    ingredientsArr.push(addLi);
 
-// const navRef = document.querySelector("#ingredients");
+
+  });
+
+  list.append(...ingredientsArr);
+
+}
+addLiItem();
+
+// const list = document.querySelector("#ingredients");
 
 
 // const item1 = document.createElement("li");
@@ -38,9 +45,9 @@ function addLiItem() {
 // const item6 = document.createElement('li');
 // item6.textContent = ingredients[5];
 
-// navRef.append(item1, item2, item3, item4, item5, item6);
+// list.append(item1, item2, item3, item4, item5, item6);
 
-// console.log(navRef);
+// console.log(list);
 
 
 // console.log(item1);
