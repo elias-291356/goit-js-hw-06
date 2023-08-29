@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector("#name-input"),t=document.querySelector("#name-output");e.addEventListener("focus",(function(t){e.style.outlineColor="tomato"})),e.addEventListener("blur",(function(t){e.style.borderColor="teal"})),e.addEventListener("input",(function(n){""!==e.value?t.textContent="".concat(e.value):t.innerHTML="Anonymous"}))}();
+//# sourceMappingURL=task-05.bb76ffb0.js.map
