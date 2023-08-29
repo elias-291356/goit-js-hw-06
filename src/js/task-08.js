@@ -8,6 +8,6 @@ formRef.addEventListener('submit', (event) => {
   const credentials = { inputLoginRef, inputPasswordRef };
   formRef.reset();
   console.log(credentials);
-}
+}   
 });
 
