@@ -1,19 +1,20 @@
 
 
-const formRef = document.querySelector('.login-form');
-let inputLoginRef = formRef.elements.email.value;
-let inputPasswordRef = formRef.elements.password.value;
+const formEl = document.querySelector('.login-form');
 
 
-formRef.addEventListener('submit', (event) => {
+
+formEl.addEventListener('submit', (event) => {
   event.preventDefault();
+  const loginEl = formEl.elements.email.value;
+  const passwordEl = formEl.elements.password.value;
 
-  if (inputLoginRef.value === '' || inputPasswordRef.value === '') {
+  if (loginEl === '' || passwordEl === '') {
     alert('Всі поля повинні бути заповнені');
   } else {
-    const credentials = { inputLoginRef, inputPasswordRef };
-    formRef.reset();
+    const credentials = { loginEl, passwordEl };
+    formEl.reset();
     console.log(credentials);
+
   }
 });
-
